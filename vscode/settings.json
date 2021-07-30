@@ -1,3 +1,13 @@
 {
-    "workbench.colorTheme": "One Monokai"
+    "workbench.colorTheme": "One Monokai",
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["2", "5", "j", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["2", "5", "k", "k"]
+    }
+  ]
 }
