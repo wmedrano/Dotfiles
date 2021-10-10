@@ -1,6 +1,6 @@
 {
-    "workbench.colorTheme": "One Monokai",
-    "vim.normalModeKeyBindingsNonRecursive": [
+  "workbench.colorTheme": "One Monokai",
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
       "after": ["2", "5", "j", "j"]
@@ -9,5 +9,28 @@
       "before": ["K"],
       "after": ["2", "5", "k", "k"]
     }
-  ]
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["2", "5", "j", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["2", "5", "k", "k"]
+    }
+  ],
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "html.format.endWithNewline": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "editor.fontSize": 12,
+  "editor.fontFamily": "Fira Code",
+  "redhat.telemetry.enabled": true,
+  "rust-analyzer.checkOnSave.command": "clippy"
 }
