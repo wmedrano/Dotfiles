@@ -20,6 +20,7 @@ require("awful.hotkeys_popup.keys")
 
 awful.spawn.with_shell("pidof nm-applet || nm-applet")
 awful.spawn.with_shell("pidof cbatticon || cbatticon")
+awful.spawn.with_shell("pkill picom; sleep 2s && picom --vsync --backend glx")
 
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
@@ -585,6 +586,9 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("focus", function(c)
+        border_focus = beautiful.border_focus
+        c.border_color = border_focus
+end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
